@@ -57,19 +57,36 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.15)
+    daemon_controller (0.2.6)
     database_cleaner (0.6.6)
     diff-lcs (1.1.2)
+    engineyard (1.3.17)
+      engineyard-serverside-adapter (= 1.4.1)
+      escape (~> 0.0.4)
+      highline (~> 1.6.1)
+      json_pure
+      net-ssh (~> 2.1.0)
+      rest-client (~> 1.6.0)
+      thor (~> 0.14.6)
+    engineyard-serverside-adapter (1.4.1)
+      escape (~> 0.0.4)
+      json_pure
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    escape (0.0.4)
     faraday (0.5.7)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (< 2, >= 1.1.0)
+    fastthread (1.0.7)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    file-tail (1.0.5)
+      spruz (>= 0.1.0)
     geocoder (0.9.10)
     gherkin (2.3.4)
       json (~> 1.4.6)
+    highline (1.6.1)
     i18n (0.5.0)
     json (1.4.6)
     json_pure (1.5.1)
@@ -85,6 +102,7 @@ GEM
     multipart-post (1.1.0)
     mysql (2.8.1)
     net-ldap (0.1.1)
+    net-ssh (2.1.3)
     nokogiri (1.4.4)
     oa-basic (0.2.0)
       multi_json (~> 0.0.2)
@@ -124,6 +142,12 @@ GEM
       oa-more (= 0.2.0)
       oa-oauth (= 0.2.0)
       oa-openid (= 0.2.0)
+    passenger (3.0.5)
+      daemon_controller (>= 0.2.5)
+      fastthread (>= 1.0.1)
+      file-tail
+      rack
+      rake (>= 0.8.1)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.2)
     rack (1.2.2)
@@ -183,6 +207,7 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    spruz (0.2.5)
     term-ansicolor (1.0.5)
     thor (0.14.6)
     treetop (1.4.9)
@@ -204,9 +229,11 @@ DEPENDENCIES
   capybara
   cucumber-rails
   database_cleaner
+  engineyard
   geocoder
   mysql
   omniauth
+  passenger
   rails (= 3.0.5)
   rspec-rails
   ruby-debug19

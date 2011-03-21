@@ -1,15 +1,13 @@
-(
-    {
-    companies:
+{
+    "companies":
         [
             <% @companies.each_with_index do |c, i|%>
             {
-              name: "<%= c.name %>",
-              latitude: "<%=c.latitude %>",
-              longitude: "<%=c.longitude %>",
-              donation_percent: "<%=c.donation_percent %>"
+                "name": "<%= c.name %>",
+                "latitude": "<%=c.latitude %>",
+                "longitude": "<%=c.longitude %>",
+                "donation_percent": "<%=c.donation_percent %>"
             }<% if (i < (@companies.length-1)) %>,<% end %>  
             <% end %>
         ]
-    }
-)
+}
