@@ -5,7 +5,7 @@ gem 'rails', '3.0.5'
 gem 'mysql'
 
 # User roles/authentication
-gem 'devise'
+gem 'omniauth'
 
 # Deploy with Capistrano
 # gem 'capistrano'

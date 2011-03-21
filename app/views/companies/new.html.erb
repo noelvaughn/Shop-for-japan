@@ -1,0 +1,43 @@
+<div id="company_info">
+  <%= form_for :company, @company, :url => url_for(:controller => 'companies', :action => 'create'), :html => { :method => :post } do |f| %>
+    <fieldset>
+      <p>
+        <%= f.label :name, "Company Name"%>
+        <%= f.text_field :name, :size => "30", :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :email, "Email"%>
+        <%= f.text_field :email, :size => "30", :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :address, "Address"%>
+        <%= f.text_field :address, :size => "30", :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :city, "City"%>
+        <%= f.text_field :city, :size => "30", :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :zip, "Zip Code"%>
+        <%= f.text_field :zip, :size => "10", :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :country, "Country"%>
+        <%= f.select :country, ::COUNTRIES, :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :website, "Website"%>
+        <%= f.text_field :website, :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :category, "Business Category"%>
+        <%= f.select :category, ::CATEGORIES, :class => "text"%> 
+      </p>
+      <p>
+        <%= f.label :donation_percent, "Donation Percent"%>
+        <%= f.select :donation_percent, (1..100).to_a, :class => "text"%>
+      </p>
+      <input type="submit" value="get listed" />
+    </fieldset>
+  <% end %>
+</div>

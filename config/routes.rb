@@ -1,4 +1,12 @@
 ShopForJapan::Application.routes.draw do
+  match '/auth/:provider/callback', :to => 'sessions#create'
+
+  match 'signup', :to => 'companies#new'
+
+  match 'map_markers', :to => 'home#map_markers'
+  root :to => 'home#index'
+
+  resource :company
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
