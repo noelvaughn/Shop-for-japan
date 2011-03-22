@@ -16,4 +16,8 @@ class CompaniesController < ApplicationController
       render :action => 'new'
     end
   end
+
+  def show
+    @companies = Company.find(:all)
+  end
 end

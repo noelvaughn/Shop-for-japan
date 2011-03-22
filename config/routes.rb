@@ -2,6 +2,7 @@ ShopForJapan::Application.routes.draw do
   match '/auth/:provider/callback', :to => 'sessions#create'
 
   match 'signup', :to => 'companies#new'
+  match 'participating-businesses', :to => 'companies#show'
 
   match 'map_markers', :to => 'home#map_markers'
   root :to => 'home#index'

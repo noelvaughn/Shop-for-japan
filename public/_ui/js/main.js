@@ -22,21 +22,9 @@ var SL = SL || {};
             var value = $("#searchLocationField").val();
             that.addressToGeocode(value, that.zoomBasedOnInput);
         });
-console.log("hi")
-
-/*
-        $.ajax({
-          url:"/map_markers.json", 
-          complete: function(data){
-            that.data = JSON.parse(data.responseText);
-            console.log(JSON.parse(data.responseText))
-            this.init(data);
-          }
-        }) */
 
         this.init()
 
-      
     }
 
     SL.map.prototype.init = function() {
@@ -67,7 +55,15 @@ console.log("hi")
     }
 
     SL.map.prototype.zoomBasedOnInput = function(location) {
-        this.zoomInOnLocation([location.geometry.location.Ba, location.geometry.location.Da]);
+      var coords = [];
+      var counter = 0;
+      $.each(location.geometry.location, function(value) {
+          if (counter < 2) {
+          coords[counter] = location.geometry.location[value]
+          }
+          counter++
+          });
+      this.zoomInOnLocation(coords);
     }
 
     SL.map.prototype.zoomInOnLocation = function(location) {
@@ -79,6 +75,8 @@ console.log("hi")
       var object = new google.maps.LatLng(lat, long);  
       object.nameOfLocation = response.name;
       object.donation_percent = response.donation_percent;
+      object.full_address = response.full_address;
+      object.website = response.website;
       return object
     }
 
@@ -125,7 +123,7 @@ console.log("hi")
     }
 
     SL.map.templates = {
-        marker: "<h2>{{nameOfLocation}}</h2><p>{{formatted_address}}</p><p>amount donated: {{donation_percent}}%</p>"
+        marker: "<h2>{{nameOfLocation}}</h2><p>{{full_address}}</p><p>Percent pledged: {{donation_percent}}%</p><a class='block' target='_blank' href='{{website}}'>{{website}}</a>"
     }
 
     SL.startApplication = (function() {

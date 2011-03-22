@@ -156,11 +156,12 @@ html { }
 
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: none; }
+a:hover, a:active { outline: none; color: #1f97be;}
 
 a, a:active, a:visited { padding: 0px; color: #;}
 a:hover {  -webkit-text-shadow: 1px 1px 1px black;}
 
+a{ color: #4d85be; }
 
 ul, ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
@@ -369,6 +370,7 @@ body {
     width: 869px;
     margin: 0 auto;
     padding-bottom: 60px;
+    padding-top: 65px;
 }
 
 #nav {
@@ -570,3 +572,23 @@ div#geoLocationLinkEnd {
 }
 
 #searchLocationField {margin-right: 5px; margin-left: 5px;}
+
+
+ul#business-list {margin-left: 0; margin-top: 15px;}
+
+ul#business-list li {
+  list-style: none;
+  margin-bottom: 30px;
+
+}
+
+ul#business-list li h2 {
+  text-transform: uppercase;
+  margin-bottom: -3px;
+}
+
+ul#business-list li p {
+  margin-bottom: 3px;
+}
+
+.marginBottom15 {margin-bottom: 10px !important;}
