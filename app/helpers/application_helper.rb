@@ -8,6 +8,7 @@ module ApplicationHelper
  "Cars, Motorcycles, Boats",
  "Clothing and Fashion",
  "Computers, Electronics, and Mobile Devices",
+ "Home Furnishing",
  "Music and Musical Instruments",
  "Photo and Video",
  "Professional Services",
@@ -17,7 +18,8 @@ module ApplicationHelper
  "Sporting Goods",
  "Tools and Home Improvement",
  "Toys and Games",
- "Websites"
+ "Websites",
+ "Other"
 ]
 ::COUNTRIES = [
   "Afghanistan",
