@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20110324182659) do
     t.datetime "updated_at"
     t.boolean  "online",           :default => false
     t.boolean  "retail",           :default => false
-    t.text     "comments",                            :null => false
+    t.text     "comments"
   end
 
   create_table "users", :force => true do |t|
