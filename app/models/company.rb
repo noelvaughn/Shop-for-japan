@@ -6,4 +6,12 @@ class Company < ActiveRecord::Base
   def address_string
     [self.address, self.city, self.zip, self.country].compact.join(" ")
   end
+  
+  def online_store?
+    self.online? ? "yes" : "no"
+  end
+
+  def retail_store?
+    self.retail? ? "yes" : "no"
+  end
 end

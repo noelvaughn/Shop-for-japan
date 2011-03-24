@@ -8,7 +8,10 @@
                 "longitude": "<%=c.longitude %>",
                 "donation_percent": "<%=c.donation_percent %>",
                 "full_address": "<%=c.full_address %>",
-                "website": "<%=c.website %>"
+                "website": "<%=c.website %>",
+                "online": "<%=c.online_store? %>",
+                "retail": "<%=c.retail_store? %>",
+                "comments": "<%=c.comments %>"
             }<% if (i < (@companies.length-1)) %>,<% end %>  
             <% end %>
         ]
