@@ -2,13 +2,16 @@ var SL = SL || {};
 
 (function(SL) {
 
+
+
+
     SL.constants = {
         GMAP_ID: "ABQIAAAAEgyYb53gc7yDlYay6uk30RT2yXp_ZAY8_ufC3CFXhHIE1NvwkxQeJSluYa5Wu6QsEWTJ5MSMy_T9jA"
     }
 
     SL.map = function() {
         var that = this;
-        
+
         if (Modernizr.geolocation){
             $(".sharingLocationFunctionality").css("display", "block");
             $(".sharingLocationFunctionalityInline").css("display", "inline")
@@ -24,7 +27,6 @@ var SL = SL || {};
         });
 
         this.init()
-
     }
 
     SL.map.prototype.init = function() {
@@ -36,7 +38,7 @@ var SL = SL || {};
         }
 
         this.map = new google.maps.Map(document.getElementById("map_canvas"), options)
-        
+
         $.getJSON("/map_markers.json", function(data) {
             data.companies.forEach(function(item) {
               that.createMarker(that.convertToLatLong(item.latitude, item.longitude, item));
@@ -72,7 +74,7 @@ var SL = SL || {};
     }
 
     SL.map.prototype.convertToLatLong = function(lat, long, response) {
-      var object = new google.maps.LatLng(lat, long);  
+      var object = new google.maps.LatLng(lat, long);
       object.nameOfLocation = response.name;
       object.donation_percent = response.donation_percent;
       object.full_address = response.full_address;
@@ -132,9 +134,13 @@ marker: "<h2>{{nameOfLocation}}</h2><p>{{full_address}}</p><p>Percent pledged: {
     SL.startApplication = (function() {
         window.japanMap = new SL.map();
         $('#searchLocationField').example("Search");
-    })();	
+    })();
 
 
 
 })(SL);
 
+$("#map-view-link").click(function(e) {
+  e.preventDefault();
+  $('html,body').animate({scrollTop: $("#map_canvas").offset().top},'fast');
+})

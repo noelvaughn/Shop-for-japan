@@ -22,7 +22,7 @@
           <li><a href="/about">About</a></li>
           <li><a href="#">List of Businesses</a></li>
           <li class="divider">&nbsp;</li>
-          <li><a href="/login">Sign Up or Login</a></li>
+          <li><a href="/login">Sign Up Your Business</a></li>
           <li><a href="participant-kit.zip">Download Poster &amp; How-To</a></li>
           <!--<li class="displaynone"><a href="#">Report Donations</a></li>-->
         </ul>
@@ -34,45 +34,45 @@
     <fieldset>
       <p>
         <%= f.label :name, "Company Name"%>
-        <%= f.text_field :name, :size => "30", :class => "text"%> 
+        <%= f.text_field :name, :size => "30", :class => "text"%>
       </p>
       <p>
         <%= f.label :email, "Email"%>
-        <%= f.text_field :email, :size => "30", :class => "text"%> 
+        <%= f.text_field :email, :size => "30", :class => "text"%>
       </p>
       <% if params[:facebook] %>
-        <p>  
-          <%= f.label :password %><br />  
-          <%= f.password_field :password %>  
-        </p>  
-        <p>  
-          <%= f.label :password_confirmation %>  
+        <p>
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </p>
+        <p>
+          <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation %>
         </p>
       <% end %>
       <p>
         <%= f.label :address, "Address"%>
-        <%= f.text_field :address, :size => "30", :class => "text"%> 
+        <%= f.text_field :address, :size => "30", :class => "text"%>
       </p>
       <p>
         <%= f.label :city, "City"%>
-        <%= f.text_field :city, :size => "30", :class => "text"%> 
+        <%= f.text_field :city, :size => "30", :class => "text"%>
       </p>
       <p>
         <%= f.label :zip, "Zip Code"%>
-        <%= f.text_field :zip, :size => "10", :class => "text"%> 
+        <%= f.text_field :zip, :size => "10", :class => "text"%>
       </p>
       <p>
         <%= f.label :country, "Country"%>
-        <%= f.select :country, ::COUNTRIES, :class => "text"%> 
+        <%= f.select :country, ::COUNTRIES, :class => "text"%>
       </p>
       <p>
         <%= f.label :website, "Website"%>
-        <%= f.text_field :website, :value => 'http://', :class => "text"%> 
+        <%= f.text_field :website, :value => 'http://', :class => "text"%>
       </p>
       <p>
         <%= f.label :category, "Business Category"%>
-        <%= f.select :category, ::CATEGORIES, :class => "text"%> 
+        <%= f.select :category, ::CATEGORIES, :class => "text"%>
       </p>
       <p>
         <%= f.label :donation_percent, "Donation Percent"%>
@@ -110,7 +110,7 @@
             })();
 
 
-            
+
           </script>
           <div class="push"></div>
         </div>

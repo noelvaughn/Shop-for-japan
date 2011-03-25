@@ -156,12 +156,12 @@ html { }
 
 
 /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-a:hover, a:active { outline: none; color: #1f97be;}
+a:hover, a:active { outline: none; color: #726d9f; text-decoration: underline;}
 
-a, a:active, a:visited { padding: 0px; color: #;}
+a, a:active, a:visited { padding: 0px;}
 a:hover {  -webkit-text-shadow: 1px 1px 1px black;}
 
-a{ color: #4d85be; }
+a{ color: #8781bd; text-decoration: none;}
 
 ul, ol { margin-left: 1.8em; }
 ol { list-style-type: decimal; }
@@ -327,8 +327,7 @@ body {
 
 .bottomRight {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    right: 72px;
 }
 
 .paddingTop100 {
@@ -453,52 +452,48 @@ Page Specific
     display: block;
 }
 
+#everyone-bucket {
+    background:transparent url('../img/home/everyone-bucket.png') no-repeat 0 0;
+    width: 871px;
+    height: 320px;
+    margin-top: 15px;
+}
+
 #business-bucket {
-    background:transparent url('../img/home/shopforjapan.jpg') no-repeat 0 0;
-    width: 422px;
-    height: 491px;
-    float: left;
-    margin-right: 23px;
-    margin-bottom: 20px;
+    background: transparent url('../img/home/business-bucket/background.png') 0 0 no-repeat;
+    width: 871px;
+    height: 310px;
     position: relative;
 }
 
-#business-bucket .bottomRight {
-    right: 20px;
-    bottom: 20px;
+#businesses-more-info-link {
+    position: absolute;
+    bottom: 9px;
+    right: 11px;
+    width: 128px;
+    height: 13px;
 }
 
-#consumer-bucket {
-    background:transparent url('../img/home/everyoneelse.jpg') no-repeat 0 0;
-    width: 422px;
-    height: 395px;
+#business-bucket a.first {margin-left: 32px;}
+
+#business-bucket a {
     float: left;
-    position: relative;
+    margin: 58px 0px 0px 14px;
 }
 
-#consumer-bucket .bottomRight {
-    right: 10px;
-    bottom: 15px;
-}
 
-#participatingShops {
-    background:transparent url('../img/home/participatingshops.jpg') no-repeat 0 0;
-    width: 297px;
-    height: 17px;
-    margin-bottom: 10px;
-    margin-top: 30px;
-}
 
-#map_canvas h1, 
+
+#map_canvas h1,
 #map_canvas h2,
 #map_canvas h3,
-#map_canvas h4, 
+#map_canvas h4,
 #map_canvas h5 {font-size: 98%;}
 
-#map_canvas h1, 
+#map_canvas h1,
 #map_canvas h2,
 #map_canvas h3,
-#map_canvas h4, 
+#map_canvas h4,
 #map_canvas h5,
 #map_canvas p {
   font-family: "Helvetica", "Arial", "sans-serif";
@@ -592,3 +587,47 @@ ul#business-list li p {
 }
 
 .marginBottom15 {margin-bottom: 10px !important;}
+
+#banner-wrapper {
+    position: relative;
+}
+
+#banner-wrapper .business-info {
+    height: 80px;
+    position: absolute;
+    right: -38px;
+    top: 283px;
+    width: 470px;
+}
+
+#business-option-list li,
+#business-option-list li a {
+    float: left;
+    list-style: none;
+    font-size: 18px;
+}
+
+#business-option-list li.first a {
+    border-right: 1px solid #dc2129;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+
+#video-link {
+    position: absolute;
+    width: 210px;
+    height: 67px;
+    top: 87px;
+    right: 0;
+    display: block;
+    z-index: 10;
+}
+
+#participatingShops {
+    background:transparent url('../img/home/participatingshops.jpg') no-repeat 0 0;
+    width: 297px;
+    height: 17px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
