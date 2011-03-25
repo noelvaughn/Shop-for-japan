@@ -4,6 +4,7 @@ ShopForJapan::Application.routes.draw do
   match 'signup', :to => 'companies#new'
   match 'participating-businesses', :to => 'companies#show'
 
+  match 'login', :to => 'home#login'
   match 'map_markers', :to => 'home#map_markers'
   root :to => 'home#index'
 

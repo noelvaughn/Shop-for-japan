@@ -9,4 +9,7 @@ class HomeController < ApplicationController
   def participants
     @companies = Company.find(:all)
   end
+
+  def login
+  end
 end

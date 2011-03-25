@@ -11,6 +11,8 @@ gem 'heroku'
 # User roles/authentication
 gem 'omniauth'
 
+gem 'bcrypt-ruby', :require => 'bcrypt'
+
 # Deploy with Capistrano
 # gem 'capistrano'
 

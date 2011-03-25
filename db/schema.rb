@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110324182659) do
+ActiveRecord::Schema.define(:version => 20110325041718) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20110324182659) do
     t.boolean  "online",           :default => false
     t.boolean  "retail",           :default => false
     t.text     "comments"
+    t.string   "password_hash"
+    t.string   "password_salt"
   end
 
   create_table "users", :force => true do |t|

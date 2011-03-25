@@ -33,6 +33,7 @@ GEM
     arel (2.0.9)
     autotest-rails (4.1.0)
       ZenTest
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     capybara (0.4.1.2)
       celerity (>= 0.7.9)
@@ -205,6 +206,7 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   autotest-rails
+  bcrypt-ruby
   capybara
   cucumber-rails
   database_cleaner

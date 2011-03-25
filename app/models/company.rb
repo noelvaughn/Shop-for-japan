@@ -1,6 +1,9 @@
 class Company < ActiveRecord::Base
+  attr_accessor :password
+  attr_accessor :password_confirmation 
   belongs_to :user
   geocoded_by :full_address
+  before_save :encrypt_password
   after_validation :geocode 
 
   def address_string
@@ -14,4 +17,11 @@ class Company < ActiveRecord::Base
   def retail_store?
     self.retail? ? "yes" : "no"
   end
+
+  def encrypt_password  
+    if password.present?  
+      self.password_salt = BCrypt::Engine.generate_salt  
+      self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)  
+    end  
+  end  
 end
