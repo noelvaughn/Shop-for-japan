@@ -30,18 +30,24 @@
           <img src="_ui/img/home/banner.jpg" alt="Banner" />
           <h1>PARTICIPATING BUSINESSES</h1>
           <div class="inner-wrapper">
-          <ul id="business-list">
-            <% @companies.each do |company| %>
-              <li>
-              <h2><%= company.name %></h2>
+            <% @countries.each do |country| %>
+              <h1><%= country %></h1>
+                
+              <ul id="business-list">
+                <% @companies.each do |company| %>
+                  <% if (company.country == country) %>
+                    <li>
+                      <h2><%= company.name %></h2>
 
-              <p><%= company.donation_percent %>% of sales pledged</p>
-              <p class="marginBottom15"><%= company.category %></p>
-              <p><%= company.full_address %></p>
-              <a class="block" href="<%= company.website %>" target="_blank"><%= company.website %></a>
-              </li>
+                      <p><%= company.donation_percent %>% of sales pledged</p>
+                      <p class="marginBottom15"><%= company.category %></p>
+                      <p><%= company.full_address %></p>
+                      <a class="block" href="<%= company.website %>" target="_blank"><%= company.website %></a>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
             <% end %>
-          </ul>
           </div>
           <script type="text/javascript">
            var _gaq = _gaq || [];

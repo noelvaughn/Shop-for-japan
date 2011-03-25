@@ -9,7 +9,16 @@ class Company < ActiveRecord::Base
   def address_string
     [self.address, self.city, self.zip, self.country].compact.join(" ")
   end
-  
+
+  def self.all_unique_countries
+    country_list = []
+    self.find(:all).each do |company|
+      country_list << company.country
+    end
+    country_list.sort!.uniq!
+    country_list
+  end
+
   def online_store?
     self.online? ? "yes" : "no"
   end

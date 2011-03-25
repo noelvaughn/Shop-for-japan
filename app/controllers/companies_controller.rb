@@ -18,6 +18,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @companies = Company.find(:all)
+    @companies = Company.find(:all, :order => "name asc")
+    @countries = Company.all_unique_countries
   end
 end
