@@ -42,7 +42,7 @@
       </p>
       <% if params[:facebook] %>
         <p>
-          <%= f.label :password %><br />
+          <%= f.label :password %>
           <%= f.password_field :password %>
         </p>
         <p>
@@ -87,7 +87,7 @@
         <%= f.check_box :retail %>
       <p>
         <%= f.label :comments, "Any additional comments?"%>
-        for example: "50% pledged from online sales only"
+        for example: "50% pledged from online sales only", or "donations going to the Red Cross."
         <%= f.text_area :comments, :rows => 5, :cols => 45%>
       </p>
       <input type="submit" value="get listed" />

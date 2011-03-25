@@ -31,13 +31,13 @@
           <h1>PARTICIPATING BUSINESSES</h1>
           <div class="inner-wrapper">
             <% @countries.each do |country| %>
-              <h1><%= country %></h1>
+              <h2><%= country %></h1>
                 
               <ul id="business-list">
                 <% @companies.each do |company| %>
                   <% if (company.country == country) %>
                     <li>
-                      <h2><%= company.name %></h2>
+                      <h3><%= company.name %></h2>
 
                       <p><%= company.donation_percent %>% of sales pledged</p>
                       <p class="marginBottom15"><%= company.category %></p>
